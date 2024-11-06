@@ -1,0 +1,124 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styling umum */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #99a1a6;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Styling kontainer utama */
+.container {
+  width: 800px;
+  max-width: 90%;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  color: #34495e;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.formbmi {
+  background-color: #5c5d8d;
+  padding: 20px;
+  color: white;
+}
+
+.description {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 22px;
+}
+
+/* Styling untuk fieldset */
+fieldset {
+  margin-bottom: 15px;
+  border: none;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Input styling */
+input[type="number"],
+input[type="radio"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+fieldset label {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  background-color: #cce2a3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #a8c69f;
+}
+
+.form-button-group {
+  display: flex;
+  width: 100%;
+  gap: 5%;
+  justify-content: center;
+}
+
+/* Styling untuk bagian hasil */
+.result {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #34495e;
+  background-color: #ecf0f1;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.result-section {
+  width: 300px;
+  display: inline-block;
+  font-size: 26px;
+  border-radius: 10px;
+  padding: 5px;
+}
