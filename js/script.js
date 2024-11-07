@@ -1,38 +1,26 @@
 // Fungsi untuk menghitung BMI dan menampilkan hasil
 function calculateBMI() {
-  // Ambil nilai input untuk gender, umur, tinggi, dan berat
-  const genderElements = document.getElementsByName("gender");
-  let gender = "";
-  for (const element of genderElements) {
-    if (element.checked) {
-      gender = element.value;
-      break;
-    }
-  }
+  // Mencegah form auto reset setelah disubmit
+  bmiForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+  });
 
-  const ageInput = document.getElementById("age").value;
-  const heightInput = document.getElementById("height").value;
-  const weightInput = document.getElementById("weight").value;
+  // Ambil nilai input untuk gender, umur, tinggi, dan berat
+  const gender = document.querySelector('input[name="gender"]:checked').value;
+  const age = document.getElementById("age").value;
+  const height = document.getElementById("height").value;
+  const weight = document.getElementById("weight").value;
 
   // Validasi input
-  if (
-    gender === "" ||
-    ageInput === "" ||
-    heightInput === "" ||
-    weightInput === ""
-  ) {
+  if (gender === "" || age === "" || height === "" || weight === "") {
     alert("Mohon isi semua data yang diperlukan.");
-    return;
+    return false;
   }
-
-  const age = parseInt(ageInput);
-  const height = parseFloat(heightInput);
-  const weight = parseFloat(weightInput);
 
   // Cek apakah nilai input positif
   if (age <= 0 || height <= 0 || weight <= 0) {
     alert("Umur, tinggi, dan berat badan harus berupa angka positif.");
-    return;
+    return false;
   }
 
   // Hitung BMI: berat (kg) / (tinggi (m) * tinggi (m))
@@ -61,17 +49,15 @@ function calculateBMI() {
   const resultDiv = document.getElementById("result");
   resultDiv.innerHTML = `
       <header class="text-center">
-        <h2>Hasil</h2>
+        <h2>HASIL PERHITUNGAN</h2>
       </header>
       <p>Jenis Kelamin: <strong>${gender}</strong></p>
       <p>Umur: <strong>${age}</strong> tahun</p>
-      <br />
       <div class="result-section" id="result-group-box">
-        <p>BMI : <strong>${bmi.toFixed(1)}</strong></p>  
-        <h4 id="category">${category}</h4>
+        <p>BMI : ${bmi.toFixed(1)}</p>  
+        <p id="category">${category}</p>
       </div>
-      <br /><br />
-      <p>Penjelasan:</p>
+      <p><strong>Penjelasan:</strong></p>
       <article>
           BMI antara 18.5 dan 24.9 dianggap sebagai berat badan sehat.<br />
           Jika BMI Anda di bawah 18.5, Anda mungkin perlu meningkatkan asupan gizi.<br />

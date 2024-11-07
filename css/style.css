@@ -7,8 +7,8 @@
 
 /* Styling umum */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #99a1a6;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #a6aebf;
   color: #333;
   display: flex;
   justify-content: center;
@@ -16,34 +16,37 @@ body {
   min-height: 100vh;
 }
 
-/* Styling kontainer utama */
 .container {
   width: 800px;
   max-width: 90%;
-  padding: 20px;
-  background-color: #ffffff;
+  padding: 25px;
+  background-color: #fbfbfb;
   border-radius: 10px;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 35px;
   color: #34495e;
   text-align: center;
   margin-bottom: 10px;
 }
 
-.formbmi {
+h2 {
+  margin: 15px;
+}
+
+#bmiForm {
   background-color: #5c5d8d;
   padding: 20px;
   color: white;
 }
 
 .description {
-  font-size: 16px;
+  font-size: 20px;
   text-align: center;
-  margin-bottom: 20px;
-  line-height: 22px;
+  margin: 20px;
+  line-height: 30px;
 }
 
 /* Styling untuk fieldset */
@@ -62,9 +65,8 @@ label {
   margin-bottom: 5px;
 }
 
-/* Input styling */
-input[type="number"],
-input[type="radio"] {
+/* Styling untuk input */
+input[type="number"] {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
@@ -72,9 +74,13 @@ input[type="radio"] {
   font-size: 14px;
 }
 
+input[type="radio"] {
+  width: 30px;
+}
+
 fieldset label {
-  display: inline-block;
-  margin-right: 10px;
+  display: inline-flex;
+  vertical-align: -webkit-baseline-middle;
 }
 
 button {
@@ -99,13 +105,14 @@ button:hover {
   width: 100%;
   gap: 5%;
   justify-content: center;
+  margin-top: 30px;
 }
 
 /* Styling untuk bagian hasil */
-.result {
+#result {
   margin-top: 20px;
-  font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
+  line-height: 30px;
   color: #34495e;
   background-color: #ecf0f1;
   padding: 15px;
@@ -116,9 +123,13 @@ button:hover {
 }
 
 .result-section {
-  width: 300px;
+  width: 60%;
   display: inline-block;
-  font-size: 26px;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 40px;
   border-radius: 10px;
-  padding: 5px;
+  padding: 10px;
+  margin: 15px;
+  color: black;
 }
